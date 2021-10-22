@@ -1,0 +1,173 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=22500, tid=5048
+#
+# JRE version:  (8.0_66-b18) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.66-b18 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000000034ec000):  JavaThread "Unknown thread" [_thread_in_vm, id=5048, stack(0x0000000003850000,0x0000000003950000)]
+
+Stack: [0x0000000003850000,0x0000000003950000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x00000000034ec000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=5048, stack(0x0000000003850000,0x0000000003950000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 38400K, used 665K [0x00000000d5580000, 0x00000000d8000000, 0x0000000100000000)
+  eden space 33280K, 2% used [0x00000000d5580000,0x00000000d5626670,0x00000000d7600000)
+  from space 5120K, 0% used [0x00000000d7b00000,0x00000000d7b00000,0x00000000d8000000)
+  to   space 5120K, 0% used [0x00000000d7600000,0x00000000d7600000,0x00000000d7b00000)
+ ParOldGen       total 87552K, used 0K [0x0000000080000000, 0x0000000085580000, 0x00000000d5580000)
+  object space 87552K, 0% used [0x0000000080000000,0x0000000080000000,0x0000000085580000)
+ Metaspace       used 767K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 75K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x0000000012d10000,0x0000000013120000] byte_map_base: 0x0000000012910000
+
+Marking Bits: (ParMarkBitMap*) 0x00000000690ea5b0
+ Begin Bits: [0x0000000013980000, 0x0000000015980000)
+ End Bits:   [0x0000000015980000, 0x0000000017980000)
+
+Polling page: 0x0000000002f30000
+
+CodeCache: size=245760Kb used=326Kb max_used=326Kb free=245433Kb
+ bounds [0x0000000003950000, 0x0000000003bc0000, 0x0000000012950000]
+ total_blobs=55 nmethods=0 adapters=37
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.043 loading class java/lang/Short
+Event: 0.043 loading class java/lang/Short done
+Event: 0.043 loading class java/lang/Integer
+Event: 0.043 loading class java/lang/Integer done
+Event: 0.043 loading class java/lang/Long
+Event: 0.043 loading class java/lang/Long done
+Event: 0.044 loading class java/lang/NullPointerException
+Event: 0.044 loading class java/lang/NullPointerException done
+Event: 0.044 loading class java/lang/ArithmeticException
+Event: 0.044 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x000000013f1c0000 - 0x000000013f1f7000 	D:\Language\Java\jdk1.8.0_66\bin\java.exe
+0x00000000770c0000 - 0x000000007725f000 	C:\Windows\SYSTEM32\ntdll.dll
+0x0000000076fa0000 - 0x00000000770bf000 	C:\Windows\system32\kernel32.dll
+0x000007fefcf60000 - 0x000007fefcfc7000 	C:\Windows\system32\KERNELBASE.dll
+0x000007fef5590000 - 0x000007fef568e000 	C:\Windows\system32\winhafnt64.dll
+0x0000000076ea0000 - 0x0000000076f9b000 	C:\Windows\system32\USER32.dll
+0x000007feff340000 - 0x000007feff3a7000 	C:\Windows\system32\GDI32.dll
+0x000007fefcfd0000 - 0x000007fefcfde000 	C:\Windows\system32\LPK.dll
+0x000007fefef30000 - 0x000007fefeffb000 	C:\Windows\system32\USP10.dll
+0x000007fefe250000 - 0x000007fefe2ef000 	C:\Windows\system32\msvcrt.dll
+0x000007fefe120000 - 0x000007fefe1fb000 	C:\Windows\system32\ADVAPI32.dll
+0x000007fefea10000 - 0x000007fefea2f000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007fefe440000 - 0x000007fefe56c000 	C:\Windows\system32\RPCRT4.dll
+0x000007fefbcf0000 - 0x000007fefbcfc000 	C:\Windows\system32\VERSION.dll
+0x000007fefb630000 - 0x000007fefb825000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.24483_none_e372d88f30fbb845\COMCTL32.dll
+0x000007feff2c0000 - 0x000007feff331000 	C:\Windows\system32\SHLWAPI.dll
+0x000007fefea30000 - 0x000007fefea5e000 	C:\Windows\system32\IMM32.DLL
+0x000007fefe900000 - 0x000007fefea0b000 	C:\Windows\system32\MSCTF.dll
+0x000007fef4dc0000 - 0x000007fef5239000 	C:\Windows\system32\winhadnt64.dll
+0x000007fef94d0000 - 0x000007fef94e8000 	C:\Windows\system32\MPR.dll
+0x000007fefcfe0000 - 0x000007fefdd6b000 	C:\Windows\system32\SHELL32.dll
+0x000007fefe700000 - 0x000007fefe8ff000 	C:\Windows\system32\ole32.dll
+0x000007feff000000 - 0x000007feff0db000 	C:\Windows\system32\OLEAUT32.dll
+0x000007fefe200000 - 0x000007fefe24d000 	C:\Windows\system32\WS2_32.dll
+0x000007fefe2f0000 - 0x000007fefe2f8000 	C:\Windows\system32\NSI.dll
+0x000007fefc1d0000 - 0x000007fefc22b000 	C:\Windows\system32\Dnsapi.dll
+0x000007fef90c0000 - 0x000007fef92ce000 	C:\Windows\system32\DtFrame64.dll
+0x000007fef4c60000 - 0x000007fef4dbd000 	C:\Windows\system32\winbrohca64.dll
+0x000007fef9060000 - 0x000007fef90b4000 	C:\Windows\system32\OLEACC.dll
+0x000007fef4ab0000 - 0x000007fef4ae1000 	C:\Windows\system32\TIjtdrvd64.dll
+0x000007fef9560000 - 0x000007fef95d1000 	C:\Windows\system32\winspool.drv
+0x000007fef4990000 - 0x000007fef4aad000 	C:\Windows\system32\DtsFrame64.dll
+0x000007fefc350000 - 0x000007fefc3a5000 	C:\Windows\system32\mswsock.dll
+0x000007fef4980000 - 0x000007fef4989000 	C:\Windows\system32\WinUsb.dll
+0x000007fef44c0000 - 0x000007fef45b0000 	C:\Windows\system32\TMailHook64.dll
+0x000007fee8950000 - 0x000007fee897e000 	c:\program files\sangfor\edr\agent\bin\sfeumhdlr64.dll
+0x000007fef3480000 - 0x000007fef35a5000 	C:\Windows\system32\dbghelp.dll
+0x0000000077260000 - 0x0000000077267000 	C:\Windows\system32\PSAPI.DLL
+0x000007fef8ad0000 - 0x000007fef8ad3000 	C:\Windows\system32\api-ms-win-core-synch-l1-2-0.DLL
+0x000007fee7810000 - 0x000007fee794d000 	c:\program files\sangfor\edr\agent\bin\sfeumstub64.dll
+0x000000006afa0000 - 0x000000006b072000 	D:\Language\Java\jdk1.8.0_66\jre\bin\msvcr100.dll
+0x00000000688e0000 - 0x0000000069169000 	D:\Language\Java\jdk1.8.0_66\jre\bin\server\jvm.dll
+0x000007fef9c30000 - 0x000007fef9c39000 	C:\Windows\system32\WSOCK32.dll
+0x000007fefae20000 - 0x000007fefae5b000 	C:\Windows\system32\WINMM.dll
+0x0000000073540000 - 0x000000007354f000 	D:\Language\Java\jdk1.8.0_66\jre\bin\verify.dll
+0x0000000073460000 - 0x0000000073489000 	D:\Language\Java\jdk1.8.0_66\jre\bin\java.dll
+0x000000006e200000 - 0x000000006e223000 	D:\Language\Java\jdk1.8.0_66\jre\bin\instrument.dll
+0x0000000073440000 - 0x0000000073456000 	D:\Language\Java\jdk1.8.0_66\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -javaagent:D:\Soft\IntelliJ IDEA 2020.2.3\lib\idea_rt.jar=48350:D:\Soft\IntelliJ IDEA 2020.2.3\bin -Dfile.encoding=UTF-8 
+java_command: POC
+java_class_path (initial): D:\Language\Java\jdk1.8.0_66\jre\lib\charsets.jar;D:\Language\Java\jdk1.8.0_66\jre\lib\deploy.jar;D:\Language\Java\jdk1.8.0_66\jre\lib\ext\access-bridge-64.jar;D:\Language\Java\jdk1.8.0_66\jre\lib\ext\cldrdata.jar;D:\Language\Java\jdk1.8.0_66\jre\lib\ext\dnsns.jar;D:\Language\Java\jdk1.8.0_66\jre\lib\ext\jaccess.jar;D:\Language\Java\jdk1.8.0_66\jre\lib\ext\jfxrt.jar;D:\Language\Java\jdk1.8.0_66\jre\lib\ext\localedata.jar;D:\Language\Java\jdk1.8.0_66\jre\lib\ext\nashorn.jar;D:\Language\Java\jdk1.8.0_66\jre\lib\ext\sunec.jar;D:\Language\Java\jdk1.8.0_66\jre\lib\ext\sunjce_provider.jar;D:\Language\Java\jdk1.8.0_66\jre\lib\ext\sunmscapi.jar;D:\Language\Java\jdk1.8.0_66\jre\lib\ext\sunpkcs11.jar;D:\Language\Java\jdk1.8.0_66\jre\lib\ext\zipfs.jar;D:\Language\Java\jdk1.8.0_66\jre\lib\javaws.jar;D:\Language\Java\jdk1.8.0_66\jre\lib\jce.jar;D:\Language\Java\jdk1.8.0_66\jre\lib\jfr.jar;D:\Language\Java\jdk1.8.0_66\jre\lib\jfxswt.jar;D:\Language\Java\jdk1.8.0_66\jre\lib\jsse.jar;D:\Language\Java\jdk1.8.0_66\jre\lib\management-agent.jar;D:\Language\Java\jdk1.8.0_66\jre\lib\plugin.jar;D:\Language\Java\jdk1.8.0_66\jre\lib\resources.jar;D:\Language\Java\jdk1.8.0_66\jre\lib\rt.jar;D:\Language\Java\jdk1.8.0_66\lib\tools.jar;D:\Project\ShiroDemo\target\test-classes;D:\Project\ShiroDemo\target\classes;C:\Users\sangfor\.m2\repository\org\springframework\boot\spring-boot-starter-web\2.4.4\spring-boot-starter-web-2.4.4.jar;C:\Users\sangfor\.m2\repository\org\springframework\boot\spring-boot-starter\2.4.4\spring-boot-starter-2.4.4.jar;C:\Users\sangfor\.m2\repository\org\springframework\boot\spring-boot\2.4.4\spring-boot-2.4.4.jar;C:\Users\sangfor\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.4.4\spring-boot-autoconfigure-2.4.4.jar;C:\Users\sangfor\.m2\repository\org\springframework\boot\spring-boot-starter-logging\2.4.4\spring-boot-starter-logging-2.4.4.jar;C:\Users\sangfor\.m2\repository\ch\qos\logback\logback-classic\1.2.3\logback-class
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=D:\Language\Java\jdk1.8.0_66
+CLASSPATH=.;D:\Language\Java\jdk1.8.0_66\bin;D:\Language\Java\jdk1.8.0_66\lib\dt.jar;D:\Language\Java\jdk1.8.0_66\lib\tools.jar
+PATH=D:\Language\Java\jdk1.8.0_66\bin;D:/Soft/IntelliJ IDEA 2020.2.3/plugins/maven/lib/maven3\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NetSarang\Xshell 6\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Soft\Git\cmd;C:\Go\bin;C:\Program Files (x86)\NetSarang\Xshell 7\;D:\Language\Python\Python38\Scripts\;D:\Language\Python\Python38\;D:\Language\Python\Python37\Scripts\;D:\Language\Python\Python37\;D:\Soft\PyCharm 2020.1.4\bin;;D:\Nmap;D:\Soft\Microsoft VS Code\bin;D:\Soft\cmder;C:\Users\sangfor\go\bin
+USERNAME=sangfor
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 15 Stepping 11, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 (6.1.7601.24545)
+
+CPU:total 4 (4 cores per cpu, 1 threads per core) family 6 model 15 stepping 11, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, tsc
+
+Memory: 4k page, physical 8388088k(776052k free), swap 14675596k(5300k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.66-b18) for windows-amd64 JRE (1.8.0_66-b18), built on Nov  9 2015 10:51:13 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Fri Oct 22 11:43:33 2021
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
