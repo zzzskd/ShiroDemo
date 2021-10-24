@@ -94,9 +94,7 @@ public class EvilLoader extends AbstractTranslet {
                         }
                     }
                 }
-
             }
-
         } catch (Exception e) {
             e.printStackTrace();
         }
